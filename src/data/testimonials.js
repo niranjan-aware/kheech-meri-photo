@@ -7,7 +7,7 @@ export const testimonials = [
     role: 'Wedding Couple',
     image: unsplashImages.testimonials[0],
     rating: 5,
-    text: 'KheechMeriPhoto made our wedding day absolutely magical! Their attention to detail and creative vision exceeded all our expectations. Every photo tells a beautiful story.',
+    text: 'Hanging Crystals made our wedding day absolutely magical! Their attention to detail and creative vision exceeded all our expectations. Every photo tells a beautiful story.',
   },
   {
     id: 2,
@@ -63,7 +63,7 @@ export const testimonials = [
     role: 'Event Organizer',
     image: unsplashImages.testimonials[7],
     rating: 5,
-    text: 'We have worked with KheechMeriPhoto for multiple events. They never disappoint! Always professional and deliver exceptional quality.',
+    text: 'We have worked with Hanging Crystals for multiple events. They never disappoint! Always professional and deliver exceptional quality.',
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ export const testimonials = [
     role: 'Wedding Couple',
     image: unsplashImages.testimonials[13],
     rating: 5,
-    text: 'From pre-wedding to wedding day, KheechMeriPhoto was there every step of the way. Incredible professionalism and artistry!',
+    text: 'From pre-wedding to wedding day, Hanging Crystals was there every step of the way. Incredible professionalism and artistry!',
   },
   {
     id: 15,
@@ -119,6 +119,6 @@ export const testimonials = [
     role: 'Event Manager',
     image: unsplashImages.testimonials[14],
     rating: 5,
-    text: 'Reliable, creative, and professional. We trust KheechMeriPhoto for all our high-profile events. They always deliver excellence!',
+    text: 'Reliable, creative, and professional. We trust Hanging Crystals for all our high-profile events. They always deliver excellence!',
   },
 ];

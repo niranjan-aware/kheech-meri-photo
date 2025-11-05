@@ -94,7 +94,7 @@ const HeroSection = () => {
         <HeroContent />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-5 bg-gradient-to-t from-white to-transparent z-40" />
+      <div className="absolute mb-5" />
     </section>
   );
 };

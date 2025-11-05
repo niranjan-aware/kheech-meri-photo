@@ -16,7 +16,7 @@ const HeroContent = () => {
             filter: 'drop-shadow(0 0 40px rgba(244, 63, 94, 0.6)) drop-shadow(0 4px 20px rgba(0, 0, 0, 0.8))',
           }}
         >
-          KheechMeriPhoto
+          Hanging Crystals
         </motion.h1>
 
         <motion.div

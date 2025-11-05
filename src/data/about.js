@@ -1,7 +1,7 @@
 export const aboutData = {
   story: {
     title: 'Our Story',
-    content: 'Founded with a passion for capturing life\'s most precious moments, KheechMeriPhoto has become Mumbai\'s trusted name in photography. With over a decade of experience, our team combines artistic vision with technical excellence to create timeless memories.',
+    content: 'Founded with a passion for capturing life\'s most precious moments, Hanging Crystals has become Mumbai\'s trusted name in photography. With over a decade of experience, our team combines artistic vision with technical excellence to create timeless memories.',
     mission: 'To capture authentic emotions and create stunning visual stories that our clients will cherish for a lifetime.',
     vision: 'To be India\'s most loved and trusted photography brand, known for creativity, quality, and customer satisfaction.',
   },

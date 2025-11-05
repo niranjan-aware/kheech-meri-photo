@@ -1,16 +1,16 @@
 export const SITE_CONFIG = {
-  name: 'KheechMeriPhoto',
+  name: 'Hanging Crystals',
   tagline: 'Capturing Moments, Creating Memories',
   description: 'Professional photography services for weddings, events, portraits, and more.',
-  email: 'hello@kheechmeriphoto.com',
+  email: 'hello@Hanging Crystals.com',
   phone: '+91 98765 43210',
   address: 'Mumbai, Maharashtra, India',
 };
 
 export const SOCIAL_LINKS = {
-  instagram: 'https://instagram.com/kheechmeriphoto',
-  facebook: 'https://facebook.com/kheechmeriphoto',
-  youtube: 'https://youtube.com/@kheechmeriphoto',
+  instagram: 'https://instagram.com/Hanging Crystals',
+  facebook: 'https://facebook.com/Hanging Crystals',
+  youtube: 'https://youtube.com/@Hanging Crystals',
   whatsapp: 'https://wa.me/919876543210',
 };
 

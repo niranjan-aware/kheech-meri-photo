@@ -1,21 +1,21 @@
 export const siteConfig = {
-  name: 'KheechMeriPhoto',
+  name: 'Hanging Crystals',
   tagline: 'Capturing Moments, Creating Memories',
   description: 'Professional photography and event services specializing in weddings, pre-wedding shoots, corporate events, and more. Based in Mumbai, India.',
   
   contact: {
-    email: 'hello@kheechmeriphoto.com',
+    email: 'hello@Hanging Crystals.com',
     phone: '+91 98765 43210',
     whatsapp: '+91 98765 43210',
     address: 'Andheri West, Mumbai, Maharashtra 400053, India',
   },
   
   social: {
-    instagram: 'https://instagram.com/kheechmeriphoto',
-    facebook: 'https://facebook.com/kheechmeriphoto',
-    youtube: 'https://youtube.com/@kheechmeriphoto',
-    pinterest: 'https://pinterest.com/kheechmeriphoto',
-    twitter: 'https://twitter.com/kheechmeriphoto',
+    instagram: 'https://instagram.com/Hanging Crystals',
+    facebook: 'https://facebook.com/Hanging Crystals',
+    youtube: 'https://youtube.com/@Hanging Crystals',
+    pinterest: 'https://pinterest.com/Hanging Crystals',
+    twitter: 'https://twitter.com/Hanging Crystals',
   },
   
   businessHours: {

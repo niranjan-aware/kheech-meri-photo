@@ -17,11 +17,12 @@ import TestimonialsSection from '@components/testimonials/TestimonialsSection';
 import AboutSection from '@components/about/AboutSection';
 import ContactSection from '@components/contact/ContactSection';
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    document.title = 'KheechMeriPhoto - Capturing Moments, Creating Memories';
+    document.title = 'Hanging Crystals - Capturing Moments, Creating Memories';
   }, []);
 
   const handleLoadingComplete = () => {
@@ -57,7 +58,7 @@ function App() {
 
           <Footer />
           <ScrollToTop />
-          <FloatingDock />
+          {/* <FloatingDock /> */}
         </>
       )}
     </>

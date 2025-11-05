@@ -65,7 +65,7 @@ const Footer = () => {
           >
             <div className="flex items-center space-x-3 mb-6">
               <FaCamera className="w-8 h-8 text-rose-500" />
-              <h3 className="font-dancing text-3xl gradient-text">KheechMeriPhoto</h3>
+              <h3 className="font-dancing text-3xl gradient-text">Hanging Crystals</h3>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               {siteConfig.description}
@@ -168,10 +168,10 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} KheechMeriPhoto. All rights reserved.
+              © {currentYear} Hanging Crystals. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm flex items-center">
-              Made with <FaHeart className="text-rose-500 mx-2 animate-pulse" /> by KheechMeriPhoto Team
+              Made with <FaHeart className="text-rose-500 mx-2 animate-pulse" /> by Hanging Crystals Team
             </p>
           </div>
         </motion.div>

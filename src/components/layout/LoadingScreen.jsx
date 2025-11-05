@@ -60,7 +60,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           transition={{ delay: 1, duration: 0.5 }}
           className="font-dancing text-5xl md:text-6xl gradient-text mb-4"
         >
-          KheechMeriPhoto
+          Hanging Crystals
         </motion.h1>
 
         <motion.p

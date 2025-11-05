@@ -66,7 +66,7 @@ const Navbar = () => {
               />
             </div>
             <span className="font-dancing text-2xl md:text-3xl bg-gradient-to-r from-rose-500 via-rose-400 to-champagne-500 bg-clip-text text-transparent">
-              KheechMeriPhoto
+              Hanging Crystals
             </span>
           </motion.a>
 

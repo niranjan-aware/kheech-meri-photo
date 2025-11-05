@@ -17,7 +17,7 @@ const AboutSection = () => {
       >
         <SectionHeading
           subtitle="Get to Know Us"
-          title="About KheechMeriPhoto"
+          title="About Hanging Crystals"
           description="Passionate photographers dedicated to capturing your most precious moments with creativity and excellence."
         />
 
