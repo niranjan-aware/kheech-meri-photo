@@ -1,0 +1,42 @@
+export const processSteps = [
+  {
+    id: 1,
+    step: 'Step 1',
+    title: 'Initial Consultation',
+    description: 'We begin with understanding your vision, requirements, and expectations. Share your ideas and let us help bring them to life.',
+    icon: '💬',
+    image: 'https://images.unsplash.com/photo-1552581234-26160f608093?w=800',
+  },
+  {
+    id: 2,
+    step: 'Step 2',
+    title: 'Planning & Preparation',
+    description: 'Our team creates a detailed plan including timeline, locations, themes, and logistics to ensure everything runs smoothly.',
+    icon: '📋',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800',
+  },
+  {
+    id: 3,
+    step: 'Step 3',
+    title: 'The Shoot',
+    description: 'On the day of the shoot, our professional team captures every moment with creativity and precision, making you feel comfortable.',
+    icon: '📸',
+    image: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800',
+  },
+  {
+    id: 4,
+    step: 'Step 4',
+    title: 'Post-Production',
+    description: 'Our expert editors enhance and perfect your photos using advanced techniques to deliver stunning results.',
+    icon: '✨',
+    image: 'https://images.unsplash.com/photo-1600091166971-7f9faad6c1e2?w=800',
+  },
+  {
+    id: 5,
+    step: 'Step 5',
+    title: 'Delivery',
+    description: 'Receive your beautifully edited photos in high resolution through a secure online gallery, ready to cherish forever.',
+    icon: '🎁',
+    image: 'https://images.unsplash.com/photo-1516239482977-b550ba7253f2?w=800',
+  },
+];
