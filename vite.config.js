@@ -14,4 +14,13 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
     },
   },
+  assetsInclude: ['**/*.mp4', '**/*.webm', '**/*.mov'],
+  build: {
+    assetsInlineLimit: 0,
+  },
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
 })

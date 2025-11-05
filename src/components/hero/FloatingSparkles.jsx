@@ -6,7 +6,7 @@ const FloatingSparkles = () => {
 
   useEffect(() => {
     const generateSparkles = () => {
-      return Array.from({ length: 30 }, (_, i) => ({
+      return Array.from({ length: 20 }, (_, i) => ({
         id: i,
         x: Math.random() * 100,
         y: Math.random() * 100,
@@ -30,7 +30,7 @@ const FloatingSparkles = () => {
             top: `${sparkle.y}%`,
             width: sparkle.size,
             height: sparkle.size,
-            background: 'radial-gradient(circle, rgba(244,63,94,0.8) 0%, rgba(244,63,94,0) 70%)',
+            background: 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 70%)',
           }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{
@@ -45,14 +45,14 @@ const FloatingSparkles = () => {
             ease: 'easeInOut',
           }}
         >
-          <div className="absolute inset-0 rounded-full bg-white shadow-lg shadow-rose-500/50" />
+          <div className="absolute inset-0 rounded-full bg-white shadow-lg shadow-white/50" />
         </motion.div>
       ))}
 
       {[...Array(10)].map((_, i) => (
         <motion.div
           key={`star-${i}`}
-          className="absolute text-rose-400"
+          className="absolute text-white text-2xl drop-shadow-lg"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
