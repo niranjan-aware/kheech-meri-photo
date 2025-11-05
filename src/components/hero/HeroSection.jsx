@@ -35,7 +35,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section id="home" className="relative min-h-screen flex items-end pb-20 overflow-hidden bg-black">
       <div className="absolute inset-0 z-0">
         {!hasVideoError ? (
           <div className="absolute inset-0 w-full h-full overflow-hidden flex items-center justify-center">
@@ -94,7 +94,7 @@ const HeroSection = () => {
         <HeroContent />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-40" />
+      <div className="absolute bottom-0 left-0 right-0 h-5 bg-gradient-to-t from-white to-transparent z-40" />
     </section>
   );
 };

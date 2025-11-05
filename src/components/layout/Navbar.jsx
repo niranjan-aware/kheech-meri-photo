@@ -45,7 +45,7 @@ const Navbar = () => {
         animate="visible"
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled 
-            ? 'glass-effect py-4 shadow-lg' 
+            ? 'bg-black/80 backdrop-blur-xl py-4 shadow-lg shadow-rose-500/20' 
             : 'bg-transparent py-6'
         }`}
       >
@@ -57,7 +57,7 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
           >
             <div className="relative">
-              <FaCamera className="w-8 h-8 text-rose-500 group-hover:text-rose-600 transition-colors" />
+              <FaCamera className="w-8 h-8 text-rose-500 group-hover:text-rose-400 transition-colors" />
               <motion.div
                 className="absolute -inset-2 bg-rose-500/20 rounded-full"
                 initial={{ scale: 0 }}
@@ -65,7 +65,7 @@ const Navbar = () => {
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </div>
-            <span className="font-dancing text-2xl md:text-3xl gradient-text">
+            <span className="font-dancing text-2xl md:text-3xl bg-gradient-to-r from-rose-500 via-rose-400 to-champagne-500 bg-clip-text text-transparent">
               KheechMeriPhoto
             </span>
           </motion.a>
@@ -78,17 +78,17 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="text-gray-700 hover:text-rose-500 font-medium transition-colors relative group"
+                className="text-champagne-300 hover:text-champagne-400 font-medium transition-colors relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-champagne-400 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
           </div>
 
           <motion.button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-rose-500 transition-colors"
+            className="md:hidden p-2 text-champagne-400 hover:text-champagne-300 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -113,14 +113,14 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 bottom-0 w-80 bg-white shadow-2xl z-50 md:hidden"
+              className="fixed top-0 right-0 bottom-0 w-80 bg-gradient-to-br from-gray-900 via-black to-gray-900 shadow-2xl z-50 md:hidden border-l border-champagne-500/20"
             >
               <div className="p-8">
                 <div className="flex items-center justify-between mb-12">
-                  <span className="font-dancing text-3xl gradient-text">Menu</span>
+                  <span className="font-dancing text-3xl bg-gradient-to-r from-rose-500 via-rose-400 to-champagne-500 bg-clip-text text-transparent">Menu</span>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-2 text-gray-700 hover:text-rose-500"
+                    className="p-2 text-champagne-400 hover:text-champagne-300"
                   >
                     <FaTimes className="w-6 h-6" />
                   </button>
@@ -135,7 +135,7 @@ const Navbar = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block text-xl font-medium text-gray-700 hover:text-rose-500 transition-colors"
+                      className="block text-xl font-medium text-champagne-300 hover:text-champagne-400 transition-colors"
                     >
                       {item.label}
                     </motion.a>
@@ -146,10 +146,10 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="mt-12 p-6 glass-effect rounded-2xl"
+                  className="mt-12 p-6 bg-champagne-500/10 border border-champagne-500/20 backdrop-blur-xl rounded-2xl"
                 >
-                  <p className="text-sm text-gray-600 mb-2">Get in touch</p>
-                  <p className="font-semibold text-rose-500">+91 98765 43210</p>
+                  <p className="text-sm text-champagne-400 mb-2">Get in touch</p>
+                  <p className="font-semibold text-champagne-300">+91 98765 43210</p>
                 </motion.div>
               </div>
             </motion.div>
