@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 import GlassCard from '@components/ui/cards/GlassCard';
 import { siteConfig } from '@data/config';
 import { socialLinks } from '@data/social';
-
 const ContactInfo = () => {
   const contactItems = [
     {
-      icon: FaPhone,
+      icon: FaPhoneAlt,
       label: 'Phone',
       value: siteConfig.contact.phone,
       link: `tel:${siteConfig.contact.phone}`,

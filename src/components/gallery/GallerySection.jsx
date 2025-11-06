@@ -1,74 +1,126 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import SectionWrapper from '@components/shared/SectionWrapper';
-import GalleryHeader from './GalleryHeader';
-import CategoryFilter from './CategoryFilter';
+import SectionHeading from '@components/shared/SectionHeading';
 import GalleryGrid from './GalleryGrid';
-import Lightbox from './Lightbox';
-import { galleryImages, galleryCategories } from '@data/gallery';
+import Button from '@components/shared/Button';
+import { FaExpand } from 'react-icons/fa';
+import { galleryCategories } from '@data/gallery';
+
+const GalleryFilters = ({ categories, selectedCategory, onSelectCategory }) => {
+  return (
+    <div className="flex flex-wrap justify-center gap-3 mb-12">
+      {categories.map((category, index) => (
+        <motion.button
+          key={category.id}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: index * 0.05 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => onSelectCategory(category.id)}
+          className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+            selectedCategory === category.id
+              ? 'bg-gradient-to-r from-rose-500 to-rose-600 text-white shadow-lg'
+              : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+          }`}
+        >
+          {category.label}
+          {category.count && (
+            <span className={`ml-2 text-sm ${
+              selectedCategory === category.id ? 'text-white/80' : 'text-gray-500'
+            }`}>
+              ({category.count})
+            </span>
+          )}
+        </motion.button>
+      ))}
+    </div>
+  );
+};
 
 const GallerySection = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [showFullGallery, setShowFullGallery] = useState(false);
+  const [maxImages, setMaxImages] = useState(30);
 
-  const filteredImages = selectedCategory === 'all'
-    ? galleryImages
-    : galleryImages.filter(img => img.category === selectedCategory);
+  useEffect(() => {
+    const updateMaxImages = () => {
+      if (window.innerWidth < 768) {
+        setMaxImages(10);
+      } else {
+        setMaxImages(30);
+      }
+    };
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
-    setIsLightboxOpen(true);
-  };
-
-  const handleCloseLightbox = () => {
-    setIsLightboxOpen(false);
-    setTimeout(() => setSelectedImage(null), 300);
-  };
-
-  const handleNext = () => {
-    const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
-    const nextIndex = (currentIndex + 1) % filteredImages.length;
-    setSelectedImage(filteredImages[nextIndex]);
-  };
-
-  const handlePrevious = () => {
-    const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
-    const previousIndex = currentIndex === 0 ? filteredImages.length - 1 : currentIndex - 1;
-    setSelectedImage(filteredImages[previousIndex]);
-  };
+    updateMaxImages();
+    window.addEventListener('resize', updateMaxImages);
+    return () => window.removeEventListener('resize', updateMaxImages);
+  }, []);
 
   return (
-    <SectionWrapper id="gallery" background="default">
+    <SectionWrapper id="gallery" background="light">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <GalleryHeader />
+        <SectionHeading
+          subtitle="Our Portfolio"
+          title="Gallery"
+          description="Explore our collection of captured moments and creative masterpieces."
+        />
 
-        <CategoryFilter
+        <GalleryFilters
           categories={galleryCategories}
           selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
+          onSelectCategory={setSelectedCategory}
         />
 
-        <AnimatePresence mode="wait">
-          <GalleryGrid
-            key={selectedCategory}
-            images={filteredImages}
-            onImageClick={handleImageClick}
-          />
-        </AnimatePresence>
-
-        <Lightbox
-          isOpen={isLightboxOpen}
-          image={selectedImage}
-          onClose={handleCloseLightbox}
-          onNext={handleNext}
-          onPrevious={handlePrevious}
+        <GalleryGrid 
+          selectedCategory={selectedCategory} 
+          maxImages={showFullGallery ? null : maxImages}
         />
+
+        {!showFullGallery && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex justify-center mt-12"
+          >
+            <Button
+              variant="primary"
+              size="lg"
+              icon={FaExpand}
+              iconPosition="right"
+              onClick={() => setShowFullGallery(true)}
+            >
+              View Full Gallery
+            </Button>
+          </motion.div>
+        )}
+
+        {showFullGallery && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mt-12"
+          >
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => setShowFullGallery(false)}
+            >
+              Show Less
+            </Button>
+          </motion.div>
+        )}
       </motion.div>
     </SectionWrapper>
   );
