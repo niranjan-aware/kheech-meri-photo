@@ -7,7 +7,7 @@ export const galleryCategories = [
   { id: 'couple', label: 'Couple Shoots', count: 20 },
   { id: 'events-corporate', label: 'Events & Corporate', count: 30 },
   { id: 'products-gifts', label: 'Products & Gifts', count: 20 },
-  { id: 'makeup-styling', label: 'Makeup & Styling', count: 20 },
+  { id: 'makeup-styling', label: 'Makeup & Mehandi', count: 20 },
   { id: 'catering', label: 'Catering', count: 15 },
 ];
 

@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
             </div>
             <p className="text-gray-600 font-semibold">
               Rated <span className="text-rose-600 font-bold">5.0/5.0</span> by{' '}
-              <span className="text-rose-600 font-bold">1000+</span> clients
+              <span className="text-rose-600 font-bold">100+</span> clients
             </p>
           </div>
         </motion.div>

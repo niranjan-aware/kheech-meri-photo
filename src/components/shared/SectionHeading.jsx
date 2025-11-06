@@ -20,7 +20,7 @@ const SectionHeading = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={cn('flex flex-col mb-16', alignments[align], className)}
+      className={cn('flex flex-col mb-8 md:mb-12', alignments[align], className)}
     >
       {subtitle && (
         <motion.span
@@ -28,7 +28,7 @@ const SectionHeading = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="inline-block px-6 py-2 mb-4 text-sm font-semibold text-rose-600 bg-rose-100 rounded-full"
+          className="inline-block px-6 py-2 mb-3 text-sm font-semibold text-rose-600 bg-rose-100 rounded-full"
         >
           {subtitle}
         </motion.span>
@@ -39,7 +39,7 @@ const SectionHeading = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-6"
+        className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-3 md:mb-4"
       >
         {title}
       </motion.h2>
@@ -50,7 +50,7 @@ const SectionHeading = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg md:text-xl text-gray-600 max-w-3xl"
+          className="text-base md:text-lg text-gray-600 max-w-3xl"
         >
           {description}
         </motion.p>

@@ -1,13 +1,13 @@
 export const aboutData = {
   story: {
     title: 'Our Story',
-    content: 'Founded with a passion for capturing life\'s most precious moments, Hanging Crystals has become Mumbai\'s trusted name in photography. With over a decade of experience, our team combines artistic vision with technical excellence to create timeless memories.',
-    mission: 'To capture authentic emotions and create stunning visual stories that our clients will cherish for a lifetime.',
-    vision: 'To be India\'s most loved and trusted photography brand, known for creativity, quality, and customer satisfaction.',
+    content: 'Founded with a passion for capturing life\'s most precious moments, Hanging Crystals has become Banglore\'s trusted name in photography. With over a decade of experience, our team combines artistic vision with technical excellence to create timeless memories.',
+    mission: 'To craft unforgettable experiences by seamlessly blending creativity, precision, and passion in every event we manage — turning our clients’ visions into cherished memories.',
+    vision: 'To become India’s most trusted and innovative event management brand, celebrated for our excellence, creativity, and commitment to delivering remarkable experiences that inspire and connect people.',
   },
   stats: [
-    { number: '1000+', label: 'Happy Couples' },
-    { number: '5000+', label: 'Events Covered' },
+    { number: '100+', label: 'Happy Couples' },
+    { number: '50+', label: 'Events Covered' },
     { number: '50K+', label: 'Photos Delivered' },
     { number: '10+', label: 'Years Experience' },
   ],

@@ -6,7 +6,7 @@ import ContactInfo from './ContactInfo';
 
 const ContactSection = () => {
   return (
-    <SectionWrapper id="contact" background="default">
+    <SectionWrapper id="contact" background="default" className="py-12 md:py-20">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -19,7 +19,7 @@ const ContactSection = () => {
           description="Ready to capture your special moments? Get in touch with us and let's create something beautiful together."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}

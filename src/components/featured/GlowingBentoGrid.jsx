@@ -89,13 +89,6 @@ const GlowingGridItem = ({ item, gridArea, featured }) => {
                 </span>
               </div>
               
-              <h3 className="font-playfair text-xl font-bold text-white mb-2">
-                {item.title}
-              </h3>
-              
-              <p className="text-sm text-white/80">
-                Click to view in full gallery
-              </p>
             </div>
           </div>
 

@@ -49,7 +49,7 @@ export const services = [
   {
     id: 4,
     title: 'Product Photography',
-    description: 'Showcase your products with stunning photography that highlights quality and detail, perfect for e-commerce and marketing.',
+    description: 'Showcase your products with stunning, detail-rich photography perfect for e-commerce and marketing.',
     icon: FaGift,
     color: 'champagne',
     features: [
@@ -63,7 +63,7 @@ export const services = [
   },
   {
     id: 5,
-    title: 'Makeup & Styling',
+    title: 'Makeup & Mehandi',
     description: 'Professional makeup and styling services to ensure you look your absolute best for your photo shoot or special event.',
     icon: FaPaintBrush,
     color: 'rose',

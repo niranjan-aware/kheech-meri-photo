@@ -48,14 +48,14 @@ const ContactForm = () => {
 
   return (
     <GlassCard className="h-full">
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">
             Full Name *
           </label>
           <input
@@ -65,102 +65,98 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
+            className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
             placeholder="Enter your full name"
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-              Email Address *
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
-              placeholder="your@email.com"
-            />
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">
+            Email Address *
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
+            placeholder="your@email.com"
+          />
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-              Phone Number *
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
-              placeholder="+91 98765 43210"
-            />
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1">
+            Phone Number *
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
+            placeholder="+91 98765 43210"
+          />
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-1">
+            Service Required *
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
           >
-            <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
-              Service Required *
-            </label>
-            <select
-              id="service"
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
-            >
-              <option value="">Select a service</option>
-              <option value="wedding">Wedding Photography</option>
-              <option value="pre-wedding">Pre-Wedding Shoot</option>
-              <option value="corporate">Corporate Events</option>
-              <option value="products">Product Photography</option>
-              <option value="makeup">Makeup & Styling</option>
-              <option value="catering">Catering Services</option>
-            </select>
-          </motion.div>
+            <option value="">Select a service</option>
+            <option value="wedding">Wedding Photography</option>
+            <option value="pre-wedding">Pre-Wedding Shoot</option>
+            <option value="corporate">Corporate Events</option>
+            <option value="products">Product Photography</option>
+            <option value="makeup">Makeup & Styling</option>
+            <option value="catering">Catering Services</option>
+          </select>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <label htmlFor="date" className="block text-sm font-semibold text-gray-700 mb-2">
-              Preferred Date
-            </label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
-            />
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <label htmlFor="date" className="block text-sm font-semibold text-gray-700 mb-1">
+            Preferred Date
+          </label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -168,7 +164,7 @@ const ContactForm = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1">
             Message
           </label>
           <textarea
@@ -176,8 +172,8 @@ const ContactForm = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            rows="5"
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50 resize-none"
+            rows="3"
+            className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-rose-500 focus:outline-none transition-colors bg-white/50 resize-none"
             placeholder="Tell us about your requirements..."
           />
         </motion.div>

@@ -18,7 +18,7 @@ const Footer = () => {
       'Pre-Wedding Shoots',
       'Corporate Events',
       'Product Photography',
-      'Makeup & Styling',
+      'Makeup & Mehandi',
       'Catering Services',
     ],
     quickLinks: [

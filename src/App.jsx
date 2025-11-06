@@ -45,11 +45,11 @@ function App() {
           <PageTransition>
             <main className="relative">
               <HeroSection />
-              <FeaturedShowcase />
+              {/* <FeaturedShowcase /> */}
               <ServicesSection />
               <InfiniteScrollPreview />
               <GallerySection />
-              <ProcessSection />
+              {/* <ProcessSection /> */}
               <TestimonialsSection />
               <AboutSection />
               <ContactSection />
